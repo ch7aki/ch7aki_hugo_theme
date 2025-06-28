@@ -1,0 +1,23 @@
+baseURL = "/"
+title = "ちあきのーと"
+languageCode = "ja"
+theme = "ch7aki"
+defaultContentLanguage = "ja"
+
+[pagination]
+pagerSize = 5
+
+[outputs]
+home = ["HTML", "JSON"]
+
+----------------------------------------
+// How To Use searchbutton/search.js
+// Put content/search.md 
+
+// ---
+// title: "Search"
+// url: "/search"
+// layout: "search"
+// draft: false
+// ---
+----------------------------------------

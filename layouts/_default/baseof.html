@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    {{ partial "favicon.html" . }}
+    <link rel="stylesheet" href="{{ "css/style.css" | absURL }}">
+  </head>
+  <body>
+    <div class="container">
+      {{ partial "header.html" . }}
+      <div id="searchQueryDisplay" style="color: #c8c3bc; font-weight: bold;"></div>
+      <div class="main-content">
+      {{ block "main" . }}{{ end }}
+      </div>
+    </div>
+    <div id="searchOverlay" class="hidden">
+      <div class="overlay-bg"></div>
+      <div class="search-box">
+        <input type="text" id="overlaySearchInput" placeholder="検索語句を入力..." />
+      </div>
+    </div>
+    <script src="/searchbutton.js"></script>
+    {{ partial "footer.html" . }}
+  </body>
+</html>

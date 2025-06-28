@@ -1,0 +1,18 @@
+{{ define "main" }}
+  <div class="article-meta">
+    <time datetime="{{ .Date }}">{{ .Date.Format "2006-01-02" }}</time>
+    {{ with .Params.tags }}
+      <span class="tags">
+        {{ range . }}
+          <a href="/tags/{{ . | urlize }}" class="tag">#{{ . }}</a>
+        {{ end }}
+      </span>
+    {{ end }}
+  </div>
+  <h2 class="article-title">{{ .Title }}</h2>
+  <p class="lead">{{ .Summary }}</p>
+  <div style="margin-top: 3em;"></div>
+  <article>
+    {{ .Content }}
+  </article>
+{{ end }}
